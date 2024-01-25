@@ -1,4 +1,5 @@
     -- Create the table
+    create DATABASE [loki];
     CREATE TABLE ExampleTable (
         ID int,
         Name nvarchar(255)
@@ -8,7 +9,3 @@
     INSERT INTO ExampleTable (ID, Name) VALUES (1, 'Alice');
     INSERT INTO ExampleTable (ID, Name) VALUES (2, 'Bob');
 
--- Select and view all data from the table
-SELECT * FROM ExampleTable;
-
-ALTER DATABASE loki SET SINGLE_USER WITH ROLLBACK IMMEDIATE
