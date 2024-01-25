@@ -20,3 +20,10 @@ sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [velu] TO DISK = N'/home/coder/pro
 
 sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "RESTORE DATABASE [velu] FROM DISK = N'/home/coder/project/workspace/velu.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ALTER DATABASE velu SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+
+
+
+
+
+ALTER USER SA WITH LOGIN = SA
+ALTER USER SA WITH DEFALT_SCHEMA = SA
