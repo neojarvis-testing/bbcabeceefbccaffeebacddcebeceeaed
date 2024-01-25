@@ -19,7 +19,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [velu] TO DISK = N'/home/coder/pro
 
 
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [velu] FROM DISK = N'/home/coder/project/workspace/velu.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
-ALTER DATABASE loki SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+ALTER DATABASE velu SET SINGLE_USER WITH ROLLBACK IMMEDIATE
 
 
 
