@@ -18,4 +18,5 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [loki] TO DISK = N'/home/coder/project/
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [loki] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 
 
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [loki] FROM DISK = N'/var/opt/mssql/data/loki.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "RESTORE DATABASE [loki] FROM DISK = N'/home/coder/project/workspace/loki.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
+ALTER DATABASE loki SET SINGLE_USER WITH ROLLBACK IMMEDIATE

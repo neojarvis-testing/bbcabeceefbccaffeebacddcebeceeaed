@@ -10,3 +10,5 @@
 
 -- Select and view all data from the table
 SELECT * FROM ExampleTable;
+
+ALTER DATABASE loki SET SINGLE_USER WITH ROLLBACK IMMEDIATE
