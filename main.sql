@@ -1,5 +1,4 @@
     -- Create the table
-    create DATABASE [loki];
     CREATE TABLE ExampleTable (
         ID int,
         Name nvarchar(255)
