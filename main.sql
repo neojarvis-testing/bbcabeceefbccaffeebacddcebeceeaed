@@ -1,4 +1,7 @@
     -- Create the table
+
+CREATE DATABASE [velu]
+use velu
     CREATE TABLE ExampleTable (
         ID int,
         Name nvarchar(255)
