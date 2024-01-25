@@ -1,0 +1,18 @@
+sqlcmd -S 127.0.0.1@143 -d loki -U SA -P examlyMssql@123 -i /home/coder/project/workspace/main.sql
+
+
+BACKUP DATABASE loki
+TO DISK = '/home/coder/project/workspace' 
+WITH INIT
+
+
+sqlcmd -S 127.0.0.1@143 -U SA -P examlyMssql@123 -Q "BACKUP DATABASE loki TO DISK = '/home/coder/project/workspace/loki.bak' WITH INIT;"
+
+sqlcmd -S 127.0.0.1 -U SA -P examlyMssql@123 -Q "BACKUP DATABASE loki TO DISK = 'C:/home/coder/project/workspace/loki.bak' WITH INIT;"
+
+
+sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "BACKUP DATABASE [loki] TO DISK = N'/var/opt/mssql/data/gopi.sql' WITH NOFORMAT, NOINIT, NAME = 'loki-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+
+
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [loki] TO DISK = N'/home/coder/project/workspace/loki_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'loki_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [loki] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
