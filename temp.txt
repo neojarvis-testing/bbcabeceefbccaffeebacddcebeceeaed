@@ -9,6 +9,7 @@ WITH INIT
 sqlcmd -S 127.0.0.1@143 -U SA -P examlyMssql@123 -Q "BACKUP DATABASE loki TO DISK = '/home/coder/project/workspace/loki.bak' WITH INIT;"
 
 sqlcmd -S 127.0.0.1 -U SA -P examlyMssql@123 -Q "BACKUP DATABASE loki TO DISK = 'C:/home/coder/project/workspace/loki.bak' WITH INIT;"
+sqlcmd -S 127.0.0.1 -U SA -P examlyMssql@123 -Q "BACKUP DATABASE loki TO DISK = 'C:/home/coder/project/workspace/loki.bak' WITH INIT;"
 
 
 sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "BACKUP DATABASE [velu] TO DISK = N'/home/coder/project/workspace/velu.bak' WITH NOFORMAT, NOINIT, NAME = 'loki-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
